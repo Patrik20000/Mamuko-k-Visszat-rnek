@@ -1,18 +1,32 @@
+/* Alap beállítások */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f2f2;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Fejléc */
 header {
-  background-image: url('fas.png');
+  background-image: url('https://i.imgur.com/tuCD2Ec.jpg'); /* Cseréld ki pontos URL-re */
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 700px 20px;
+  padding: 80px 20px;
   text-align: center;
   border-bottom: 5px solid #cc0000;
   position: relative;
-  height: 500px; /* állítható magasság */
 }
 
 header::before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.5); /* sötét réteg a szöveg olvashatóságához */
+  background-color: rgba(0, 0, 0, 0.6); /* sötét áttetsző réteg a szöveg olvashatóságához */
   position: absolute;
   top: 0; left: 0;
   width: 100%;
@@ -24,4 +38,101 @@ header h1,
 header p {
   position: relative;
   z-index: 1;
+}
+
+
+header h1 {
+  font-size: 2.5em;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+/* Navigáció */
+nav {
+  background-color: #003366;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  padding: 14px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #005599;
+}
+
+/* Szekciók */
+section {
+  padding: 50px 20px;
+  background-color: white;
+  margin: 20px auto;
+  max-width: 1000px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-left: 4px solid #003366;
+  border-radius: 5px;
+}
+
+section h2 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+/* Hírek */
+.news {
+  background-color: #e9eef5;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #cc0000;
+  border-radius: 4px;
+}
+
+.news h3 {
+  margin-bottom: 10px;
+  color: #002244;
+}
+
+/* Lista */
+ul {
+  list-style: square inside;
+  margin-top: 10px;
+}
+
+/* Lábjegyzet */
+footer {
+  background-color: #002244;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9em;
+  margin-top: 40px;
+  border-top: 5px solid #cc0000;
+}
+
+/* Reszponzivitás */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    text-align: center;
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
 }
