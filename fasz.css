@@ -7,7 +7,7 @@ header {
   text-align: center;
   border-bottom: 5px solid #cc0000;
   position: relative;
-  height: 300px; /* állítható magasság */
+  height: 500px; /* állítható magasság */
 }
 
 header::before {
