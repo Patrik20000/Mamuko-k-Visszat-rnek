@@ -14,7 +14,7 @@ body {
 
 /* Fejléc */
 header {
-  background-image: url('https://i.imgur.com/tuCD2Ec.jpg'); /* Cseréld ki pontos URL-re */
+  background-image: url('fas.png'); /* Cseréld ki pontos URL-re */
   background-size: cover;
   background-position: center;
   color: white;
