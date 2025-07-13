@@ -1,3 +1,12 @@
+/* Define color variables for easier maintenance */
+:root {
+  --primary-green: #064602;
+  --secondary-green: #025f14;
+  --hover-blue: #004488;
+  --footer-green: #025522fe;
+}
+
+/* Then replace all color references with these variables */
 body {
   margin: 0;
   padding: 0;
@@ -31,11 +40,15 @@ nav {
   flex-wrap: wrap;
 }
 
+/* Add transitions for smoother hover effects */
 nav a {
-  color: white;
-  padding: 14px 20px;
-  display: block;
-  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for active/focused states */
+nav a:focus {
+  outline: 2px solid var(--hover-blue);
+  outline-offset: 2px;
 }
 
 nav a:hover {
