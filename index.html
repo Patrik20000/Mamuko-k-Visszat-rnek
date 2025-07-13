@@ -1,58 +1,118 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="fasz.css">
-
+<html lang="hu">
 <head>
-    <link rel="icon" type="image/x-icon" href="icon.png">
-    <style>
-        body {
-            background-color: black;
-            text-align: center;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        
-        #play-button {
-            position: absolute;
-            z-index: 2;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Magyar Honvédség</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #002244;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #004488;
+    }
+
+    section {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+    }
+
+    .news {
+      background-color: #e6e6e6;
+      margin-top: 20px;
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
-
 <body>
-    <video id="background-video" autoplay loop muted>
-        <source src="hatter.mp4" type="video/mp4">
-        A böngésződ nem támogatja a videó lejátszást.
-    </video>
 
-    <button id="play-button" onclick="playVid()" type="button">Mamukoék!</button>
-    <br>
-    <video id="myVideo" width="0" height="0">
-        <source src="video2.mp4" type="video/mp4">
-    </video>
+<header>
+  <h1>Magyar Honvédség</h1>
+  <p>"Hazáért mindhalálig"</p>
+</header>
 
-    <script>
-        let vid = document.getElementById("myVideo");
+<nav>
+  <a href="#rolunk">Rólunk</a>
+  <a href="#kuldetes">Küldetés</a>
+  <a href="#hirek">Hírek</a>
+  <a href="#csatlakozas">Csatlakozás</a>
+  <a href="#kapcsolat">Kapcsolat</a>
+</nav>
 
-        function playVid() {
-            vid.play();
-            if (vid.requestFullscreen) {
-                vid.requestFullscreen();
-            } else if (vid.webkitRequestFullscreen) {
-                vid.webkitRequestFullscreen();
-            } else if (vid.msRequestFullscreen) {
-                vid.msRequestFullscreen();
-            }
-        }
+<section id="rolunk">
+  <h2>Rólunk</h2>
+  <p>A Magyar Honvédség az ország függetlenségének, területi integritásának és állampolgárainak védelmére hivatott fegyveres erő. Büszkék vagyunk történelmünkre, hagyományainkra és katonáink elkötelezettségére.</p>
+</section>
 
-        function pauseVid() {
-            vid.pause();
-        }
-    </script>
-</body>
+<section id="kuldetes">
+  <h2>Küldetésünk</h2>
+  <p>Katonáink feladata a hazai és nemzetközi béke, biztonság és stabilitás fenntartása. Számos NATO és EU misszióban veszünk részt, képzett és felkészült szakemberekkel.</p>
+</section>
 
-</html>
+<section id="hirek">
+  <h2>Friss hírek</h2>
+
+  <div class="news">
+    <h3>2025. július 10. – Közös gyakorlat a szövetségesekkel</h3>
+    <p>A Honvédség sikeresen zárta a többnemzetiségű gyakorlatot, amelyen 12 ország katonái vettek részt.</p>
+  </div>
+
+  <div class="news">
+    <h3>2025. július 2. – Új eszközök a haditechnikai fejlesztés keretében</h3>
+    <p>Modern harcjárműveket és drónrendszereket szerzett be a Honvédség.</p>
+  </div>
+</section>
+
+<section id="csatlakozas">
+  <h2>Csatlakozz hozzánk</h2>
+  <p>Szeretnél hazád szolgálatába állni? Legyél része egy összetartó, fegyelmezett és elkötelezett közösségnek. Várunk katonai és civil pozíciókba is!</p>
+  <ul>
+    <li><strong>Képzések:</strong> Alapkiképzés, szakkiképzés</li>
+    <li><strong>Karrierlehetőségek:</strong> Szárazföldi, légierő, logisztika</li>
+    <li><strong>Jelentkezés:</strong> Töltsd ki az online űrlapot vagy látogass el toborzó irodánkba.</li>
+  </ul>
+</section>
+
+<section id="kapcsolat">
+  <h2>Kapcsolat</h2>
+  <p><strong>Cím:</strong> 1134 Budapest, Lehel út 35.</p>
+  <p><strong>Telefon:</strong> +36 1 123 4567</p>
+  <p><strong>E-mail:</strong> info@honvedseg.hu</p>
+</section>
+
+<fo
