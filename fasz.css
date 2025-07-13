@@ -5,7 +5,21 @@
   --hover-blue: #004488;
   --footer-green: #025522fe;
 }
+/* Better typography scale */
+html {
+  font-size: 16px;
+}
 
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* More consistent heading sizes */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+.subheading { font-size: 1.25rem; }
 /* Then replace all color references with these variables */
 body {
   margin: 0;
