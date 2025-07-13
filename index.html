@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="fasz.css">
+  <link rel="stylesheet" href="style.css">
 
   <title>Magyar Honvédség</title>
   <style>
@@ -14,14 +14,14 @@
     }
 
     header {
-      background-color: #003366;
+      background-color: #064602;
       color: white;
       padding: 20px;
       text-align: center;
     }
 
     nav {
-      background-color: #002244;
+      background-color: #025f14;
       display: flex;
       justify-content: center;
     }
@@ -51,7 +51,7 @@
     }
 
     footer {
-      background-color: #003366;
+      background-color: #025522fe;
       color: white;
       text-align: center;
       padding: 10px;
@@ -61,33 +61,11 @@
 </head>
 <body>
 
-header {
-  background-image: url('https://i.imgur.com/tuCD2Ec.jpg'); /* Cseréld ki pontos URL-re */
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-  border-bottom: 5px solid #cc0000;
-  position: relative;
-}
-
-header::before {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.6); /* sötét áttetsző réteg a szöveg olvashatóságához */
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-header h1,
-header p {
-  position: relative;
-  z-index: 1;
-}
-
+<header>
+  <h1>Magyar Honvédség</h1>
+  <p>"Hazáért mindhalálig"</p>
+  <img src="fas.png" alt="Magyar Honvédség Logo" style="width: 100px; height: auto;">
+</header>
 
 <nav>
   <a href="#rolunk">Rólunk</a>
@@ -107,35 +85,25 @@ header p {
   <p>Katonáink feladata a hazai és nemzetközi béke, biztonság és stabilitás fenntartása. Számos NATO és EU misszióban veszünk részt, képzett és felkészült szakemberekkel.</p>
 </section>
 
-<section id="hirek">
-  <h2>Friss hírek</h2>
-
-  <div class="news">
-    <h3>2025. július 10. – Közös gyakorlat a szövetségesekkel</h3>
-    <p>A Honvédség sikeresen zárta a többnemzetiségű gyakorlatot, amelyen 12 ország katonái vettek részt.</p>
-  </div>
-
-  <div class="news">
-    <h3>2025. július 2. – Új eszközök a haditechnikai fejlesztés keretében</h3>
-    <p>Modern harcjárműveket és drónrendszereket szerzett be a Honvédség.</p>
-  </div>
-</section>
-
 <section id="csatlakozas">
   <h2>Csatlakozz hozzánk</h2>
   <p>Szeretnél hazád szolgálatába állni? Legyél része egy összetartó, fegyelmezett és elkötelezett közösségnek. Várunk katonai és civil pozíciókba is!</p>
   <ul>
     <li><strong>Képzések:</strong> Alapkiképzés, szakkiképzés</li>
-    <li><strong>Karrierlehetőségek:</strong> Szárazföldi, légierő, logisztika</li>
-    <li><strong>Jelentkezés:</strong> Töltsd ki az online űrlapot vagy látogass el toborzó irodánkba.</li>
+    <li><strong>Karrierlehetőségek:</strong> Szárazföldi, Légierő, Haditengerészet</li>
+    <li><strong>Jelentkezés:</strong> Töltsd ki az <a href="https://forms.gle/JsKo5aLDxy1kQ9cH8">online űrlapot</a> vagy látogass el toborzó irodánkba.</li>
   </ul>
 </section>
 
 <section id="kapcsolat">
   <h2>Kapcsolat</h2>
-  <p><strong>Cím:</strong> 1134 Budapest, Lehel út 35.</p>
-  <p><strong>Telefon:</strong> +36 1 123 4567</p>
-  <p><strong>E-mail:</strong> info@honvedseg.hu</p>
+  <p><strong>Cím:</strong>5135  San Fierro Main St.</p>
+  <p><strong>Telefon:</strong> +36 30 566 2445</p>
 </section>
 
-<fo
+<footer>
+  <p>&copy; 2025 Magyar Honvédség. Minden jog fenntartva.</p>
+</footer>
+
+</body>
+</html>
