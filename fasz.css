@@ -8,10 +8,14 @@ body {
 }
 
 header {
-  background-color: #064602;
+  background-image: url('fas.png'); /* Cseréld ki pontos URL-re */
+  background-size: cover;
+  background-position: center;
   color: white;
-  padding: 30px 20px;
+  padding: 7px 1px;
   text-align: center;
+  border-bottom: 5px solid #098f26a0;
+  position: relative;
 }
 
 header h1 {
