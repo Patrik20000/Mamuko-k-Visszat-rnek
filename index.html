@@ -1,77 +1,106 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Magyar Honvédség</title>
-  <link rel="stylesheet" href="fasz.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magyar Honvédség - Egységeink</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #003366;
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .menu button {
+      padding: 10px 20px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .menu button:hover {
+      background-color: #0055a5;
+    }
+    .content {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .apply {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .apply a {
+      color: #003366;
+      text-decoration: none;
+    }
+    .apply a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-  <header class="main-header">
-    <div class="container">
-      <h1>Magyar Honvédség</h1>
-      <p class="slogan">"Hazáért mindhalálig"</p>
-    </div>
-  </header>
+  <h1>Magyar Honvédség - Egységeink</h1>
 
-  <nav class="navbar">
-    <div class="container">
-      <a href="#rolunk">Rólunk</a>
-      <a href="#kuldetes">Küldetés</a>
-      <a href="#egysegek">Egységek</a>
-      <a href="#csatlakozas">Karrier</a>
-      <a href="#kapcsolat">Kapcsolat</a>
-    </div>
-  </nav>
+  <div class="menu">
+    <button onclick="showContent('szf')">Szárazföldi Erők</button>
+    <button onclick="showContent('legiero')">Légierő</button>
+    <button onclick="showContent('kme')">Különleges Műveleti Egységek</button>
+  </div>
 
-  <main class="container">
-    <section id="rolunk">
-      <h2>Rólunk</h2>
-      <p>A Magyar Honvédség Magyarország állandó, hivatásos fegyveres ereje. Feladata az ország védelme, a nemzetközi béke támogatása, valamint a szövetségesi kötelezettségek teljesítése. Modern, technológiailag fejlett és jól kiképzett állománnyal rendelkezünk.</p>
-    </section>
+  <div class="content" id="infoBox">
+    <p>Kattints az egységek nevére a részletes információért!</p>
+  </div>
 
-    <section id="kuldetes">
-      <h2>Küldetésünk</h2>
-      <p>Küldetésünk Magyarország szuverenitásának és területi integritásának védelme, a lakosság biztonságának támogatása, valamint részvétel nemzetközi békefenntartó és humanitárius műveletekben.</p>
-    </section>
+  <p class="apply">
+    Jelentkezés: <a href="https://forms.gle/JsKo5aLDxy1kQ9cH8" target="_blank">Online jelentkezési űrlap</a> kitöltésével vagy személyesen a toborzó irodánkban.
+  </p>
 
-    <section id="egysegek">
-      <h2>Egységeink</h2>
-
-      <h3>Szárazföldi Erők</h3>
-      <p>A szárazföldi egységek feladatai közé tartozik a területvédelem, kiképzés, gyakorlatok és szükség esetén katasztrófavédelmi támogatás.</p>
-
-      <h3>Légierő</h3>
-      <p>A Magyar Légierő biztosítja a légtér védelmét, légi felderítést, szállítást és légi támogatást.</p>
-
-      <h3>Különleges Műveleti Egységek</h3>
-      <p>Speciális kiképzéssel rendelkező egységek stratégiai műveletekhez és biztonsági feladatokhoz.</p>
-    </section>
-
-    <section id="csatlakozas">
-      <h2>Karrier a Honvédségnél</h2>
-      <p>Csatlakozz a Magyar Honvédséghez és legyél része egy fegyelmezett, elhivatott közösségnek. Kínálunk:</p>
-      <ul>
-        <li>Alap- és szakképzési programokat</li>
-        <li>Változatos beosztásokat szárazföldi, légi vagy technikai területen</li>
-        <li>Stabil munkahelyet, előrelépési lehetőséggel</li>
-      </ul>
-      <p><strong>Jelentkezés:</strong> <a href="https://forms.gle/JsKo5aLDxy1kQ9cH8" target="_blank">Online jelentkezési űrlap</a> kitöltésével vagy személyesen a toborzó irodánkban.</p>
-    </section>
-
-    <section id="kapcsolat">
-      <h2>Kapcsolat</h2>
-      <p><strong>Cím:</strong> San Fierro Main St. 1.</p>
-      <p><strong>Telefon:</strong> +36 30 566 2445</p>
-    </section>
-  </main>
-
-  <footer class="main-footer">
-    <div class="container">
-      <p>&copy; 2025 Magyar Honvédség. Minden jog fenntartva.</p>
-    </div>
-  </footer>
+  <script>
+    function showContent(unit) {
+      const infoBox = document.getElementById('infoBox');
+      let content = '';
+      switch (unit) {
+        case 'szf':
+          content = `
+            <h2>Szárazföldi Erők</h2>
+            <p>A szárazföldi egységek feladatai közé tartozik a területvédelem, kiképzés, gyakorlatok és szükség esetén katasztrófavédelmi támogatás.</p>
+          `;
+          break;
+        case 'legiero':
+          content = `
+            <h2>Légierő</h2>
+            <p>A Magyar Légierő biztosítja a légtér védelmét, légi felderítést, szállítást és légi támogatást.</p>
+          `;
+          break;
+        case 'kme':
+          content = `
+            <h2>Különleges Műveleti Egységek</h2>
+            <p>Speciális kiképzéssel rendelkező egységek stratégiai műveletekhez és biztonsági feladatokhoz.</p>
+          `;
+          break;
+        default:
+          content = `<p>Kattints az egységek nevére a részletes információért!</p>`;
+      }
+      infoBox.innerHTML = content;
+    }
+  </script>
 
 </body>
 </html>
