@@ -20,10 +20,15 @@ body {
 
 /* Fejléc */
 .main-header {
-  background-color: #1a2e3b;
-  color: #fff;
-  padding: 40px 0;
+ background-image: url('fas.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 20px;
   text-align: center;
+  border-bottom: 5px solid #cc0000;
+  position: relative;
+  height: 300px; /* állítható magasság */
 }
 
 .main-header h1 {
