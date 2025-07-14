@@ -1,87 +1,106 @@
-body {
+/* Reset és alapbeállítások */
+* {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f2f2f2;
-  color: #222;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-header {
-  background-image: url('fas.png'); /* Cseréld ki pontos URL-re */
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 7px 1px;
-  text-align: center;
-  border-bottom: 5px solid #098f26a0;
-  position: relative;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 36px;
-}
-
-header p {
-  font-style: italic;
-  margin-top: 8px;
-}
-
-nav {
-  background-color: #025f14;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: white;
-  padding: 14px 20px;
-  display: block;
-  text-decoration: none;
-}
-
-nav a:hover {
-  background-color: #004488;
-}
-
-section {
+.container {
+  width: 90%;
   max-width: 1000px;
-  margin: 40px auto;
-  padding: 30px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
 }
 
-section h2 {
-  color: #064602;
-  margin-top: 0;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 8px;
+/* Fejléc */
+.main-header {
+  background-color: #1a2e3b;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.main-header h1 {
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+.slogan {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Navigáció */
+.navbar {
+  background-color: #253a4d;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Fő tartalom */
+main section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #1a2e3b;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #1a2e3b;
+  padding-bottom: 5px;
+}
+
+h3 {
+  margin-top: 20px;
+  color: #2c4a5f;
 }
 
 ul {
+  margin-top: 10px;
   padding-left: 20px;
 }
 
-ul li {
-  margin-bottom: 10px;
+a {
+  color: #1a2e3b;
 }
 
-.subheading {
-  font-weight: bold;
-  margin-top: 25px;
-  color: #025f14;
-  font-size: 18px;
-}
-
-footer {
+/* Lábléc */
+.main-footer {
+  background-color: #1a2e3b;
+  color: #fff;
   text-align: center;
-  padding: 20px;
-  background-color: #025522fe;
-  color: white;
-  margin-top: 60px;
-  font-size: 14px;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+/* Mobilbarát */
+@media (max-width: 600px) {
+  .navbar {
+    text-align: center;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .main-header h1 {
+    font-size: 1.8em;
+  }
 }
