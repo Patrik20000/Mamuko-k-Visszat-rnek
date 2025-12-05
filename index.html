@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>MTA Csatlakozás</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta http-equiv="refresh" content="1; url=mtasa://213.181.206.27:22034">
 
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      background: linear-gradient(135deg, #111e31, #0f0f0f);
       color: white;
       font-family: Arial, sans-serif;
       height: 100vh;
@@ -24,7 +25,9 @@
       font-size: 32px;
       margin-bottom: 10px;
     }
-
+    div.pic {
+      margin-bottom: 10px;
+    }
     p {
       font-size: 18px;
       color: #bbbbbb;
@@ -36,14 +39,19 @@
       text-decoration: none;
       font-weight: bold;
     }
-
+    h3 {
+      font-style: italic;
+      font-size: 10px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin-top: 130px;
+    }
     .loader {
       border: 6px solid #444;
       border-top: 6px solid #4da6ff;
-      border-radius: 50%;
+      border-radius: 100%;
       width: 50px;
       height: 50px;
-      animation: spin 1s linear infinite;
+      animation: spin 2s linear infinite;
       margin-bottom: 20px;
     }
 
@@ -54,16 +62,20 @@
   </style>
 </head>
 <body>
-
+  <div class="pic">
+    <image src="fasz.png" width=200 height=200>
+  </div>
   <div class="loader"></div>
+  <h1>Köszöntelek a szerverünkön!</h1>
+  <p>Addig igyál meg egy kolát szokiba</p>
 
-  <h1>Csatlakozás a szerverhez...</h1>
-  <p>Az MTA kliens hamarosan elindul.</p>
-
-  <p>Ha nem indul el automatikusan,<br>
-    kattints ide: <br><br>
-    <a href="mtasa://213.181.206.27:22034">mtasa://213.181.206.27:22034</a>
+  <p>Ha nem indul el automatikusan, kattints ide:<br>
+    <a href="mtasa://213.181.206.27:22034">Manuális Csatlakozás</a>
   </p>
+
+  <div class="footer">
+    <h3>© készitette Pingu</h3>
+  </div>
 
 </body>
 </html>
