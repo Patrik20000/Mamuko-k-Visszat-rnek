@@ -1,58 +1,13 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magyar Honvédség - Egységeink</title>
-  <link rel="stylesheet" href="style.css">
+  <title>MTA Csatlakozás</title>
+  <meta http-equiv="refresh" content="0; url=mtasa://213.181.206.27:22034">
 </head>
 <body>
-
-  <h1>Magyar Honvédség - Egységeink</h1>
-
-  <div class="menu">
-    <button onclick="showContent('szf')">Szárazföldi Erők</button>
-    <button onclick="showContent('legiero')">Légierő</button>
-    <button onclick="showContent('kme')">Különleges Műveleti Egységek</button>
-  </div>
-
-  <div class="content" id="infoBox">
-    <p>Kattints az egységek nevére a részletes információért!</p>
-  </div>
-
-  <p class="apply">
-    Jelentkezés: <a href="https://forms.gle/JsKo5aLDxy1kQ9cH8" target="_blank">Online jelentkezési űrlap</a> kitöltésével vagy személyesen a toborzó irodánkban.
+  <p>Ha nem indul el automatikusan, katt ide: 
+    <a href="mtasa://213.181.206.27:22034">Csatlakozás a szerverhez</a>
   </p>
-
-  <script>
-    function showContent(unit) {
-      const infoBox = document.getElementById('infoBox');
-      let content = '';
-      switch (unit) {
-        case 'szf':
-          content = `
-            <h2>Szárazföldi Erők</h2>
-            <p>A szárazföldi egységek feladatai közé tartozik a területvédelem, kiképzés, gyakorlatok és szükség esetén katasztrófavédelmi támogatás.</p>
-          `;
-          break;
-        case 'legiero':
-          content = `
-            <h2>Légierő</h2>
-            <p>A Magyar Légierő biztosítja a légtér védelmét, légi felderítést, szállítást és légi támogatást.</p>
-          `;
-          break;
-        case 'kme':
-          content = `
-            <h2>Különleges Műveleti Egységek</h2>
-            <p>Speciális kiképzéssel rendelkező egységek stratégiai műveletekhez és biztonsági feladatokhoz.</p>
-          `;
-          break;
-        default:
-          content = `<p>Kattints az egységek nevére a részletes információért!</p>`;
-      }
-      infoBox.innerHTML = content;
-    }
-  </script>
-
 </body>
 </html>
