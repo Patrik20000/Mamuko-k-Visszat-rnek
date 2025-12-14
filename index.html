@@ -2,81 +2,106 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8">
-  <title>MTA Csatlakozás</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <meta http-equiv="refresh" content="1; url=mtasa://212.73.137.7:22034">
+  <title>Szerver Csatlakozás</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      padding: 0;
       background: linear-gradient(135deg, #111e31, #0f0f0f);
-      color: white;
-      font-family: Arial, sans-serif;
       height: 100vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      color: white;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 20px 30px;
       text-align: center;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-    div.pic {
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 18px;
-      color: #bbbbbb;
-    }
-
-    a {
-      color: #4da6ff;
-      font-size: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    h3 {
-      font-style: italic;
-      font-size: 10px;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      margin-top: 130px;
-    }
-    .loader {
-      border: 6px solid #444;
-      border-top: 6px solid #4da6ff;
-      border-radius: 100%;
-      width: 50px;
-      height: 50px;
-      animation: spin 2s linear infinite;
+    .logo {
+      width: 120px;
       margin-bottom: 20px;
+      
     }
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    .countdown {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 15px 0;
+      color: #4da6ff;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 14px 28px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #4da6ff, #1f6bff);
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+    footer {
+      position: fixed;
+      bottom: 15px;
+      font-size: 12px;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <div class="pic">
-    <image src="fasz.png" width=200 height=200>
-  </div>
-  <div class="loader"></div>
-  <h1>Köszöntelek a szerverünkön!</h1>
-  <p>Addig igyál meg egy kolát szokiba</p>
+  <footer>© készítette Pingu</footer>
+  <div class="card">
 
-  <p>Ha nem indul el automatikusan, kattints ide:<br>
-    <a href="mtasa://212.73.137.7:22034">Manuális Csatlakozás</a>
-  </p>
+    <h1>Csatlakozás folyamatban</h1>
+    <p>A szerver hamarosan elindul…</p>
 
-  <div class="footer">
-    <h3>© készitette Pingu</h3>
+    <div class="countdown" id="countdown">5</div>
+
+    <button class="btn" id="startBtn">indítás</button>
   </div>
+  <script>
+    const SERVER_URL = "mtasa://213.181.206.27:22034";
+    const START_TIME = 5;
+
+    let timeLeft = START_TIME;
+    const countdownEl = document.getElementById("countdown");
+    const btn = document.getElementById("startBtn");
+
+    btn.addEventListener("click", () => {
+      btn.style.display = "none";
+
+      sound.volume = 0.5;
+      sound.play().catch(() => {});
+
+      const timer = setInterval(() => {
+        timeLeft--;
+        countdownEl.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          window.location.href = SERVER_URL;
+        }
+      }, 1000);
+    });
+  </script>
 
 </body>
 </html>
-
